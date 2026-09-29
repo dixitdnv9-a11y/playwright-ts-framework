@@ -1,0 +1,1 @@
+export class Logger { constructor(private ctx: string){} info(m:string){ console.log(`[${this.ctx}] ${m}`);} }

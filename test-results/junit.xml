@@ -1,0 +1,653 @@
+<testsuites id="" name="" tests="25" failures="9" skipped="2" errors="1" time="124.422077">
+<testsuite name="e2e\auth.spec.ts" timestamp="2026-09-29T18:33:58.235Z" hostname="chromium" tests="5" failures="1" skipped="2" time="30.83" errors="0">
+<testcase name="Authentication Flow - TC01 to TC04 (Single User Lifecycle) › TC01 - Register User" classname="e2e\auth.spec.ts" time="5.578">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication Flow - TC01 to TC04 (Single User Lifecycle) › TC02 - Login User with correct email and password" classname="e2e\auth.spec.ts" time="2.976">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication Flow - TC01 to TC04 (Single User Lifecycle) › TC04 - Logout User" classname="e2e\auth.spec.ts" time="22.276">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-auth-Authentication-Fl-8707e-ifecycle-TC04---Logout-User-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-auth-Authentication-Fl-8707e-ifecycle-TC04---Logout-User-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-auth-Authentication-Fl-8707e-ifecycle-TC04---Logout-User-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-auth-Authentication-Fl-8707e-ifecycle-TC04---Logout-User-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › e2e\auth.spec.ts:63:7 › Authentication Flow - TC01 to TC04 (Single User Lifecycle) › TC04 - Logout User 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('ul.nav.navbar-nav').locator('text=Logged in as').first()
+    Expected: visible
+    Timeout: 20000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('ul.nav.navbar-nav').locator('text=Logged in as').first() with timeout 20000ms
+      - waiting for locator('ul.nav.navbar-nav').locator('text=Logged in as').first()
+
+
+       at ..\src\components\HeaderComponent.ts:30
+
+      28 |     // FIXED: Wait for navigation and for element to be attached first
+      29 |     await this.page.waitForLoadState('domcontentloaded');
+    > 30 |     await expect(this.loggedInAs).toBeVisible({ timeout: 20000 });
+         |                                   ^
+      31 |     await expect(this.loggedInAs).toContainText(username, { timeout: 10000 });
+      32 |   }
+      33 | }
+        at HeaderComponent.verifyLoggedIn (C:\Users\Dell\Desktop\playwright-ts-framework\src\components\HeaderComponent.ts:30:35)
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\auth.spec.ts:66:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-auth-Authentication-Fl-8707e-ifecycle-TC04---Logout-User-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-auth-Authentication-Fl-8707e-ifecycle-TC04---Logout-User-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-auth-Authentication-Fl-8707e-ifecycle-TC04---Logout-User-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-auth-Authentication-Fl-8707e-ifecycle-TC04---Logout-User-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-auth-Authentication-Fl-8707e-ifecycle-TC04---Logout-User-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Authentication Flow - TC01 to TC04 (Single User Lifecycle) › TC03 - Login User with incorrect email and password" classname="e2e\auth.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Authentication Flow - TC01 to TC04 (Single User Lifecycle) › TC05-like Cleanup - Login again and Delete Account (after TC01-TC04 passed)" classname="e2e\auth.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="e2e\order.spec.ts" timestamp="2026-09-29T18:33:58.235Z" hostname="chromium" tests="5" failures="2" skipped="0" time="44.644" errors="1">
+<testcase name="Order Flow @regression › TC14 @smoke - Place Order: Register while Checkout" classname="e2e\order.spec.ts" time="4.877">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-order-Order-Flow-regre-dc9b9-der-Register-while-Checkout-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-order-Order-Flow-regre-dc9b9-der-Register-while-Checkout-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-order-Order-Flow-regre-dc9b9-der-Register-while-Checkout-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-order-Order-Flow-regre-dc9b9-der-Register-while-Checkout-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › e2e\order.spec.ts:11:7 › Order Flow @regression › TC14 @smoke - Place Order: Register while Checkout 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+    Expected: visible
+    Error: strict mode violation: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) resolved to 2 elements:
+        1) <table id="cart_info_table" class="table table-condensed">…</table> aka getByText('Item Description Price Quantity Total Blue Top Women > Tops Rs. 500 1 Rs.')
+        2) <tr id="product-1">…</tr> aka getByRole('row', { name: 'Product Image Blue Top Women' })
+
+    Call log:
+      - Expect "toBeVisible" locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) with timeout 15000ms
+      - waiting for locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+
+
+       at ..\src\pages\CartPage.ts:36
+
+      34 |     // FIXED: Wait for either cart table or rows, with fallback
+      35 |     await this.page.waitForLoadState('domcontentloaded');
+    > 36 |     await expect(this.cartTable.or(this.cartRows.first())).toBeVisible({ timeout: 15000 });
+         |                                                            ^
+      37 |   }
+      38 |
+      39 |   async verifyEmpty() {
+        at CartPage.verifyNotEmpty (C:\Users\Dell\Desktop\playwright-ts-framework\src\pages\CartPage.ts:36:60)
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\order.spec.ts:19:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-order-Order-Flow-regre-dc9b9-der-Register-while-Checkout-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-order-Order-Flow-regre-dc9b9-der-Register-while-Checkout-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-order-Order-Flow-regre-dc9b9-der-Register-while-Checkout-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-order-Order-Flow-regre-dc9b9-der-Register-while-Checkout-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-order-Order-Flow-regre-dc9b9-der-Register-while-Checkout-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Order Flow @regression › TC15 - Place Order: Register before Checkout" classname="e2e\order.spec.ts" time="7.096">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-order-Order-Flow-regre-c63e6-er-Register-before-Checkout-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-order-Order-Flow-regre-c63e6-er-Register-before-Checkout-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-order-Order-Flow-regre-c63e6-er-Register-before-Checkout-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-order-Order-Flow-regre-c63e6-er-Register-before-Checkout-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › e2e\order.spec.ts:43:7 › Order Flow @regression › TC15 - Place Order: Register before Checkout 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+    Expected: visible
+    Error: strict mode violation: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) resolved to 2 elements:
+        1) <table id="cart_info_table" class="table table-condensed">…</table> aka getByText('Item Description Price Quantity Total Blue Top Women > Tops Rs. 500 1 Rs.')
+        2) <tr id="product-1">…</tr> aka getByRole('row', { name: 'Product Image Blue Top Women' })
+
+    Call log:
+      - Expect "toBeVisible" locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) with timeout 15000ms
+      - waiting for locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+
+
+       at ..\src\pages\CartPage.ts:36
+
+      34 |     // FIXED: Wait for either cart table or rows, with fallback
+      35 |     await this.page.waitForLoadState('domcontentloaded');
+    > 36 |     await expect(this.cartTable.or(this.cartRows.first())).toBeVisible({ timeout: 15000 });
+         |                                                            ^
+      37 |   }
+      38 |
+      39 |   async verifyEmpty() {
+        at CartPage.verifyNotEmpty (C:\Users\Dell\Desktop\playwright-ts-framework\src\pages\CartPage.ts:36:60)
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\order.spec.ts:58:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-order-Order-Flow-regre-c63e6-er-Register-before-Checkout-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-order-Order-Flow-regre-c63e6-er-Register-before-Checkout-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-order-Order-Flow-regre-c63e6-er-Register-before-Checkout-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-order-Order-Flow-regre-c63e6-er-Register-before-Checkout-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-order-Order-Flow-regre-c63e6-er-Register-before-Checkout-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Order Flow @regression › TC16 - Place Order: Login before Checkout" classname="e2e\order.spec.ts" time="13.999">
+</testcase>
+<testcase name="Order Flow @regression › TC23 - Verify address details in checkout" classname="e2e\order.spec.ts" time="5.983">
+</testcase>
+<testcase name="Order Flow @regression › TC24 - Download Invoice after purchase" classname="e2e\order.spec.ts" time="12.689">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-order-Order-Flow-regre-09a37-load-Invoice-after-purchase-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-order-Order-Flow-regre-09a37-load-Invoice-after-purchase-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-order-Order-Flow-regre-09a37-load-Invoice-after-purchase-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-order-Order-Flow-regre-09a37-load-Invoice-after-purchase-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="locator.waitFor: Timeout 10000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › e2e\order.spec.ts:124:7 › Order Flow @regression › TC24 - Download Invoice after purchase › Click locator('a.btn:has-text("Proceed To Checkout")') 
+
+    TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('a.btn:has-text("Proceed To Checkout")')
+
+
+       at ..\src\core\BasePage.ts:26
+
+      24 |   async safeClick(locator: Locator, options: { force?: boolean; timeout?: number } = {}) {
+      25 |     await test.step(`Click ${locator}`, async () => {
+    > 26 |       await locator.waitFor({ state: 'attached', timeout: options.timeout || 10000 });
+         |                     ^
+      27 |       await locator.scrollIntoViewIfNeeded().catch(() => {});
+      28 |       if (options.force) {
+      29 |         await locator.evaluate((el: HTMLElement) => el.click());
+        at C:\Users\Dell\Desktop\playwright-ts-framework\src\core\BasePage.ts:26:21
+        at CartPage.safeClick (C:\Users\Dell\Desktop\playwright-ts-framework\src\core\BasePage.ts:25:5)
+        at CartPage.proceedToCheckout (C:\Users\Dell\Desktop\playwright-ts-framework\src\pages\CartPage.ts:52:5)
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\order.spec.ts:130:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-order-Order-Flow-regre-09a37-load-Invoice-after-purchase-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-order-Order-Flow-regre-09a37-load-Invoice-after-purchase-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-order-Order-Flow-regre-09a37-load-Invoice-after-purchase-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-order-Order-Flow-regre-09a37-load-Invoice-after-purchase-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-order-Order-Flow-regre-09a37-load-Invoice-after-purchase-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="e2e\products.spec.ts" timestamp="2026-09-29T18:33:58.235Z" hostname="chromium" tests="13" failures="5" skipped="0" time="80.986" errors="0">
+<testcase name="Products &amp; Cart Flow @regression › TC07 @smoke - Verify Test Cases Page" classname="e2e\products.spec.ts" time="2.017">
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC08 @smoke - All Products and product detail" classname="e2e\products.spec.ts" time="2.977">
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC09 - Search Product" classname="e2e\products.spec.ts" time="2.149">
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC10 - Subscription in home page" classname="e2e\products.spec.ts" time="2.808">
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC11 - Subscription in Cart page" classname="e2e\products.spec.ts" time="1.686">
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC12 - Add Products in Cart" classname="e2e\products.spec.ts" time="3.472">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-products-Products-Cart-1cf5f-TC12---Add-Products-in-Cart-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-1cf5f-TC12---Add-Products-in-Cart-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-1cf5f-TC12---Add-Products-in-Cart-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-1cf5f-TC12---Add-Products-in-Cart-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › e2e\products.spec.ts:49:7 › Products & Cart Flow @regression › TC12 - Add Products in Cart 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+    Expected: visible
+    Error: strict mode violation: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) resolved to 2 elements:
+        1) <table id="cart_info_table" class="table table-condensed">…</table> aka getByText('Item Description Price Quantity Total Blue Top Women > Tops Rs. 500 1 Rs. 500')
+        2) <tr id="product-1">…</tr> aka getByRole('row', { name: 'Product Image Blue Top Women' })
+
+    Call log:
+      - Expect "toBeVisible" locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) with timeout 15000ms
+      - waiting for locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+
+
+       at ..\src\pages\CartPage.ts:36
+
+      34 |     // FIXED: Wait for either cart table or rows, with fallback
+      35 |     await this.page.waitForLoadState('domcontentloaded');
+    > 36 |     await expect(this.cartTable.or(this.cartRows.first())).toBeVisible({ timeout: 15000 });
+         |                                                            ^
+      37 |   }
+      38 |
+      39 |   async verifyEmpty() {
+        at CartPage.verifyNotEmpty (C:\Users\Dell\Desktop\playwright-ts-framework\src\pages\CartPage.ts:36:60)
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\products.spec.ts:57:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-1cf5f-TC12---Add-Products-in-Cart-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-1cf5f-TC12---Add-Products-in-Cart-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-products-Products-Cart-1cf5f-TC12---Add-Products-in-Cart-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-1cf5f-TC12---Add-Products-in-Cart-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-products-Products-Cart-1cf5f-TC12---Add-Products-in-Cart-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC13 - Verify Product quantity in Cart" classname="e2e\products.spec.ts" time="18.335">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-products-Products-Cart-830be-fy-Product-quantity-in-Cart-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-830be-fy-Product-quantity-in-Cart-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-830be-fy-Product-quantity-in-Cart-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-830be-fy-Product-quantity-in-Cart-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › e2e\products.spec.ts:61:7 › Products & Cart Flow @regression › TC13 - Verify Product quantity in Cart 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) with timeout 15000ms
+      - waiting for locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+
+
+       at ..\src\pages\CartPage.ts:36
+
+      34 |     // FIXED: Wait for either cart table or rows, with fallback
+      35 |     await this.page.waitForLoadState('domcontentloaded');
+    > 36 |     await expect(this.cartTable.or(this.cartRows.first())).toBeVisible({ timeout: 15000 });
+         |                                                            ^
+      37 |   }
+      38 |
+      39 |   async verifyEmpty() {
+        at CartPage.verifyNotEmpty (C:\Users\Dell\Desktop\playwright-ts-framework\src\pages\CartPage.ts:36:60)
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\products.spec.ts:67:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-830be-fy-Product-quantity-in-Cart-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-830be-fy-Product-quantity-in-Cart-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-products-Products-Cart-830be-fy-Product-quantity-in-Cart-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-830be-fy-Product-quantity-in-Cart-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-products-Products-Cart-830be-fy-Product-quantity-in-Cart-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC17 - Remove Products From Cart" classname="e2e\products.spec.ts" time="18.237">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-products-Products-Cart-69e74---Remove-Products-From-Cart-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-69e74---Remove-Products-From-Cart-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-69e74---Remove-Products-From-Cart-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-69e74---Remove-Products-From-Cart-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › e2e\products.spec.ts:71:7 › Products & Cart Flow @regression › TC17 - Remove Products From Cart 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) with timeout 15000ms
+      - waiting for locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+
+
+       at ..\src\pages\CartPage.ts:36
+
+      34 |     // FIXED: Wait for either cart table or rows, with fallback
+      35 |     await this.page.waitForLoadState('domcontentloaded');
+    > 36 |     await expect(this.cartTable.or(this.cartRows.first())).toBeVisible({ timeout: 15000 });
+         |                                                            ^
+      37 |   }
+      38 |
+      39 |   async verifyEmpty() {
+        at CartPage.verifyNotEmpty (C:\Users\Dell\Desktop\playwright-ts-framework\src\pages\CartPage.ts:36:60)
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\products.spec.ts:75:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-69e74---Remove-Products-From-Cart-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-69e74---Remove-Products-From-Cart-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-products-Products-Cart-69e74---Remove-Products-From-Cart-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-69e74---Remove-Products-From-Cart-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-products-Products-Cart-69e74---Remove-Products-From-Cart-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC18 - View Category Products" classname="e2e\products.spec.ts" time="9.092">
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC19 - View &amp; Cart Brand Products" classname="e2e\products.spec.ts" time="4.864">
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC20 - Search and Verify Cart After Login" classname="e2e\products.spec.ts" time="5.871">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-products-Products-Cart-2c232-and-Verify-Cart-After-Login-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-2c232-and-Verify-Cart-After-Login-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-2c232-and-Verify-Cart-After-Login-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-2c232-and-Verify-Cart-After-Login-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › e2e\products.spec.ts:106:7 › Products & Cart Flow @regression › TC20 - Search and Verify Cart After Login 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+    Expected: visible
+    Error: strict mode violation: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) resolved to 2 elements:
+        1) <table id="cart_info_table" class="table table-condensed">…</table> aka getByText('Item Description Price Quantity Total Blue Top Women > Tops Rs. 500 1 Rs. 500')
+        2) <tr id="product-1">…</tr> aka getByRole('row', { name: 'Product Image Blue Top Women' })
+
+    Call log:
+      - Expect "toBeVisible" locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) with timeout 15000ms
+      - waiting for locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+
+
+       at ..\src\pages\CartPage.ts:36
+
+      34 |     // FIXED: Wait for either cart table or rows, with fallback
+      35 |     await this.page.waitForLoadState('domcontentloaded');
+    > 36 |     await expect(this.cartTable.or(this.cartRows.first())).toBeVisible({ timeout: 15000 });
+         |                                                            ^
+      37 |   }
+      38 |
+      39 |   async verifyEmpty() {
+        at CartPage.verifyNotEmpty (C:\Users\Dell\Desktop\playwright-ts-framework\src\pages\CartPage.ts:36:60)
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\products.spec.ts:117:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-2c232-and-Verify-Cart-After-Login-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-2c232-and-Verify-Cart-After-Login-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-products-Products-Cart-2c232-and-Verify-Cart-After-Login-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-2c232-and-Verify-Cart-After-Login-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-products-Products-Cart-2c232-and-Verify-Cart-After-Login-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC21 - Add review on product" classname="e2e\products.spec.ts" time="5.061">
+</testcase>
+<testcase name="Products &amp; Cart Flow @regression › TC22 - Add to cart from Recommended items" classname="e2e\products.spec.ts" time="4.417">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-products-Products-Cart-c3910-cart-from-Recommended-items-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-c3910-cart-from-Recommended-items-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-c3910-cart-from-Recommended-items-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-products-Products-Cart-c3910-cart-from-Recommended-items-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › e2e\products.spec.ts:140:7 › Products & Cart Flow @regression › TC22 - Add to cart from Recommended items 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+    Expected: visible
+    Error: strict mode violation: locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) resolved to 2 elements:
+        1) <table id="cart_info_table" class="table table-condensed">…</table> aka getByText('Item Description Price Quantity Total Blue Top Women > Tops Rs. 500 1 Rs.')
+        2) <tr id="product-1">…</tr> aka getByRole('row', { name: 'Product Image Blue Top Women' })
+
+    Call log:
+      - Expect "toBeVisible" locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first()) with timeout 15000ms
+      - waiting for locator('#cart_info_table').or(locator('#cart_info_table tbody tr').first())
+
+
+       at ..\src\pages\CartPage.ts:36
+
+      34 |     // FIXED: Wait for either cart table or rows, with fallback
+      35 |     await this.page.waitForLoadState('domcontentloaded');
+    > 36 |     await expect(this.cartTable.or(this.cartRows.first())).toBeVisible({ timeout: 15000 });
+         |                                                            ^
+      37 |   }
+      38 |
+      39 |   async verifyEmpty() {
+        at CartPage.verifyNotEmpty (C:\Users\Dell\Desktop\playwright-ts-framework\src\pages\CartPage.ts:36:60)
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\products.spec.ts:147:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-c3910-cart-from-Recommended-items-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-c3910-cart-from-Recommended-items-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-products-Products-Cart-c3910-cart-from-Recommended-items-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-products-Products-Cart-c3910-cart-from-Recommended-items-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-products-Products-Cart-c3910-cart-from-Recommended-items-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="e2e\ui.spec.ts" timestamp="2026-09-29T18:33:58.235Z" hostname="chromium" tests="2" failures="1" skipped="0" time="24.022" errors="0">
+<testcase name="Scroll &amp; UI @regression › TC25 - Verify Scroll Up using Arrow button and Scroll Down" classname="e2e\ui.spec.ts" time="22.259">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-ui-Scroll-UI-regressio-20e36-rrow-button-and-Scroll-Down-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-ui-Scroll-UI-regressio-20e36-rrow-button-and-Scroll-Down-chromium\video.webm]]
+
+[[ATTACHMENT|e2e-ui-Scroll-UI-regressio-20e36-rrow-button-and-Scroll-Down-chromium\error-context.md]]
+
+[[ATTACHMENT|e2e-ui-Scroll-UI-regressio-20e36-rrow-button-and-Scroll-Down-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeHidden() failed" type="expect.toBeHidden">
+<![CDATA[  [chromium] › e2e\ui.spec.ts:4:7 › Scroll & UI @regression › TC25 - Verify Scroll Up using Arrow button and Scroll Down 
+
+    Error: expect(locator).toBeHidden() failed
+
+    Locator:  locator('h2:has-text("Subscription")')
+    Expected: hidden
+    Received: visible
+    Timeout:  20000ms
+
+    Call log:
+      - Expect "toBeHidden" locator('h2:has-text("Subscription")') with timeout 20000ms
+      - waiting for locator('h2:has-text("Subscription")')
+        43 × locator resolved to <h2>Subscription</h2>
+           - unexpected value "visible"
+
+
+      4 |   test('TC25 - Verify Scroll Up using Arrow button and Scroll Down', async ({ page, homePage }) => {
+      5 |     await homePage.goto();
+    > 6 |     await expect(page.locator('h2:has-text("Subscription")')).toBeHidden();
+        |                                                               ^
+      7 |     
+      8 |     // Scroll down
+      9 |     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+        at C:\Users\Dell\Desktop\playwright-ts-framework\tests\e2e\ui.spec.ts:6:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-ui-Scroll-UI-regressio-20e36-rrow-button-and-Scroll-Down-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-ui-Scroll-UI-regressio-20e36-rrow-button-and-Scroll-Down-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-ui-Scroll-UI-regressio-20e36-rrow-button-and-Scroll-Down-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\e2e-ui-Scroll-UI-regressio-20e36-rrow-button-and-Scroll-Down-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\e2e-ui-Scroll-UI-regressio-20e36-rrow-button-and-Scroll-Down-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Scroll &amp; UI @regression › TC26 - Verify Scroll Up without Arrow button" classname="e2e\ui.spec.ts" time="1.763">
+</testcase>
+</testsuite>
+</testsuites>

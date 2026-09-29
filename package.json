@@ -1,0 +1,18 @@
+{
+  "name": "playwright-enterprise-2026",
+  "version": "3.0.0",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:smoke": "npx playwright test --project=smoke",
+    "test:regression": "npx playwright test --project=regression",
+    "test:ci": "npx playwright test --workers=2 --reporter=junit,list,html",
+    "report": "npx playwright show-report",
+    "clean": "rm -rf test-results playwright-report .auth"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "@playwright/test": "^1.63.0",
+    "allure-playwright": "^3.2.0",
+    "dotenv": "^16.4.0"
+  }
+}
